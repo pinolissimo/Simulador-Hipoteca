@@ -1,0 +1,66 @@
+<!--
+  Open Boot Camp Reto Diario #2
+- Lenguaje: HTML, CSS y JavaScript
+- IDE recomendado: Visual Studio Code
+- Nivel: Inicial
+- Enunciado: Haz una web simulador de cuota de hipoteca.
+Para ello, el usuario proporcionará:
+cantidad (€), número de cuotas (meses) y tipo de interés (%).
+La página devolverá el importe de la cuota mensual.
+Opcional: puedes usar un slider en el número de cuotas y en el tipo de interés.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\Simulador_Hipoteca_Google_Style.css">
+    <script src=".\jquery-ui-1.13.0\jquery-ui-1.13.0\external\jquery\jquery.js"></script>
+    <script src=".\jquery-ui-1.13.0\jquery-ui-1.13.0\jquery-ui.js"></script>
+    <title>Simulador de Cuota de Hipoteca</title>
+  </head>
+
+  <body>
+    <div class="my-form">
+      <form action="" class="base_form" name="modulo">
+        <h1 class="title_of_form">Simulador de Hipoteca</h1>
+        <div class="div_form">
+          <input type="range" min="10000" max="500000" step="1000" value="100000" onchange="cantidad.value=value + ' € Cantidad de Prestamo'" class="input_form" placeholder="Cantidad de Prestamo" id="cantitad">
+          <label for="cantidad" class="form__label"></label>
+          <output id="cantidad" for="cantidad">100000 € Cantidad de Prestamo</output>
+        </div>
+        <div class="div_form">
+          <input type="range" min="6" max="320" step="1" value="48" onchange="cuotas.value=value + ' Cuotas Mensual'" class="input_form" placeholder="" id"cuotas"="">
+          <label for="cuotas" class="form__label"></label>
+          <output id="cuotas" for="cuotas">246 Cuotas Mensual</output>
+        </div>
+        <div class="div_form">
+          <fieldset class="form__label">
+            <legend>Seleccione el tipo de interés:</legend>
+            <label for="radio-1">Interés fijo 2.5</label>
+            <input type="radio" name="radio-1" id="radio-1" checked>
+            <label for="radio-2">Interés variable 1.5</label>
+            <input type="radio" name="radio-1" id="radio-2">
+          </fieldset>
+          <br>
+          <input type="button" class="form__button" value="Calcular" onclick="resultado()">
+          <br>
+        </div>
+        <div class="div_form">
+          <br>
+          <h2> Resultado:</h2>
+          <h2 id="resultado">resultado </h2>
+          <label for="resultado" class="form__label"></label>
+        </div>
+        <br>
+        <div class="logo">
+          <img class="flex" src="img\ob.png" alt="">
+          <h5 class="logo">© Giuseppe Allocca 10/11/2021 </h5>
+        </div>
+      </form>
+    </div>
+    <script src="js\Simulador_Hipoteca_Google_Style.js"></script>
+  </body>
+</html>
