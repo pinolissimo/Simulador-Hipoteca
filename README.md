@@ -11,7 +11,9 @@ Para ello, el usuario proporcionará:
 cantidad (€), número de cuotas (meses) y tipo de interés (%).
 La página devolverá el importe de la cuota mensual.
 Opcional: puedes usar un slider en el número de cuotas y en el tipo de interés.
-
+<p align="center">
+<img src="https://github.com/pinolissimo/IMG/blob/4e09fb380a5f454cd1bc09321822e32043adc2ba/simulador-hipoteca.png" alt="html5" width="50%" height="50%"/>
+</p>
 
 <h1 align="center">Hi 👋, I'm Giuseppe Allocca</h1>
 <h3 align="center">A passionate Full-stack developer from Barcelona</h3>
